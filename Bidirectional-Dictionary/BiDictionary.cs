@@ -2,8 +2,8 @@
 
 public class BiDictionary<T1, T2> where T1 : notnull where T2 : notnull
 {
-    private Dictionary<T1, T2> _forward;
-    private Dictionary<T2, T1> _backward;
+    private Dictionary<T1, T2> _forward = new();
+    private Dictionary<T2, T1> _backward = new();
     public void Add(T1 key, T2 value)
     {
         _forward.Add(key, value);
